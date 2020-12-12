@@ -15,7 +15,8 @@ install:
   - npm run generate
 
 script:
-  - echo "Skipping tests"
+  - cd dist/
+  - rm '.nojekyll'
 
 deploy:
   provider: pages
