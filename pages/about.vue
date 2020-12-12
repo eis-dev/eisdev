@@ -9,7 +9,9 @@
 
   export default {
     async asyncData({$content, params}) {
-      const text = await $content('pages', 'about').fetch();
+      let text = await $content('pages', 'about').fetch();
+      text = JSON.stringify(text).replace(/www./g, '');
+      text = JSON.parse(text);
       return {text}
     }
   }

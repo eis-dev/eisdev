@@ -15,6 +15,6 @@ I am a software developer who has 8 years of professional experience in Frontend
 
 As a programmer who is keen on innovations and willing to learn by using my knowledge and experience; I want to develop new projects with contemporary technologies. 
 
-Visit my linkedin profile on https://linkedin.com/in/eisdev and my github repositories on https://github.com/eis-dev
+Visit my linkedin profile on www.linkedin.com/in/eisdev and my github repositories on www.github.com/eis-dev
 
-And visit my personal web site on http://eisdev.me
+And visit my personal web site on www.eisdev.me
