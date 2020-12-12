@@ -1,5 +1,5 @@
 <template>
-  <VueHtml2pdf :show-layout="true" :float-layout="true" :enable-download="false" :preview-modal="true"
+  <VueHtml2pdf :show-layout="false" :float-layout="false" :enable-download="true" :preview-modal="false"
                :paginate-elements-by-height="999999" filename="Eyup_ISIK_CV" :pdf-quality="5"
                :manual-pagination="false" pdf-format="a4" pdf-orientation="portrait" pdf-content-width="800px"
                ref="html2Pdf">
