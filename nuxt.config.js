@@ -18,5 +18,9 @@ export default {
     fullTextSearchFields: ['title', 'description'],
     liveEdit: false
   },
-  build: {}
+  build: {},
+  target: 'static',
+  generate: {
+    subFolders: false
+  }
 }
