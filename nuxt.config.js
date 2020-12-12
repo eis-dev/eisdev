@@ -11,7 +11,8 @@ export default {
   components: true,
   buildModules: [],
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    'bootstrap-vue/nuxt'
   ],
   content: {
     fullTextSearchFields: ['title', 'description'],
