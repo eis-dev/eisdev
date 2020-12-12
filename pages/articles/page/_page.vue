@@ -4,7 +4,7 @@
     <h4 class="font-weight-normal" v-if="currentPage > 1" v-text="'page ' + currentPage"/>
     <ul class="list-group list-group-flush mt-3">
       <li class="list-group-item" v-for="item of paginatedArticles">
-        <nuxt-link :to="'/articles/' + item.slug + $config.ext" class="read-more font-weight-light d-block mt-2">
+        <nuxt-link :to="'/articles/' + item.slug" class="read-more font-weight-light d-block mt-2">
           <strong class="d-block" v-text="item.title"></strong>
           <span v-text="'read article'"/>
         </nuxt-link>

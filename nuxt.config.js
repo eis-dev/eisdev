@@ -19,11 +19,6 @@ export default {
     target: 'static',
     generate: {
         subFolders: false,
-        fallback: false,
-        crawler: false
-    },
-    dev: process.env.NODE_ENV !== 'production',
-    publicRuntimeConfig: {
-        ext: process.env.NODE_ENV !== 'development' ? '' : ''
+        fallback: false
     }
 }
