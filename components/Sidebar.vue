@@ -6,7 +6,7 @@
       </NuxtLink>
     </h1>
     <div class="menu-area mb-4 pb-2">
-      <NuxtLink :to="'/'+item.link" class="title link text-decoration-none" v-for="item in menu" v-text="item.title"/>
+      <NuxtLink :to="'/'+item.link+ext" class="title link text-decoration-none" v-for="item in menu" v-text="item.title"/>
     </div>
   </div>
 </template>
@@ -34,6 +34,11 @@
             link: "contact"
           },
         }
+      }
+    },
+    computed: {
+      ext() {
+        return process.browser ? "" : ".html"
       }
     }
   }

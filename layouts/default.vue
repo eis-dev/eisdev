@@ -18,35 +18,6 @@
 
 <script>
   export default {
-    name: "default",
-    mounted() {
-      // browser scale disable
-      document.addEventListener('touchmove', function (event) {
-        if (event.scale !== 1) { event.preventDefault(); }
-      }, false);
-      let lastTouchEnd = 0;
-      document.addEventListener('touchend', function (event) {
-        let now = (new Date()).getTime();
-        if (now - lastTouchEnd <= 300) event.preventDefault();
-        lastTouchEnd = now;
-      }, false);
-      document.addEventListener('gesturestart', function(e) {
-        e.preventDefault();
-        // special hack to prevent zoom-to-tabs gesture in safari
-        document.body.style.zoom = 0.99;
-      });
-
-      document.addEventListener('gesturechange', function(e) {
-        e.preventDefault();
-        // special hack to prevent zoom-to-tabs gesture in safari
-        document.body.style.zoom = 0.99;
-      });
-
-      document.addEventListener('gestureend', function(e) {
-        e.preventDefault();
-        // special hack to prevent zoom-to-tabs gesture in safari
-        document.body.style.zoom = 0.99;
-      });
-    }
+    name: "default"
   }
 </script>
