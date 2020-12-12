@@ -16,7 +16,6 @@ export default {
         liveEdit: false
     },
     build: {},
-    target: 'static',
     generate: {
         subFolders: false,
         fallback: false

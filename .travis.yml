@@ -17,6 +17,7 @@ install:
 script:
   - cd dist/
   - rm '.nojekyll'
+  - rm -r _nuxt
 
 deploy:
   provider: pages
