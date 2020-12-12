@@ -13,8 +13,6 @@ branches:
 install:
   - npm install
   - npm run generate
-  - cd dist/
-  - rm '.nojekyll'
 
 deploy:
   provider: pages
