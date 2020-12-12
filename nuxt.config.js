@@ -6,7 +6,7 @@ export default {
             {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'}
         ]
     },
-    css: ["@/assets/style.css"],
+    css: ['@/assets/style.css'],
     plugins: [],
     components: true,
     buildModules: [],
@@ -19,5 +19,9 @@ export default {
     target: 'static',
     generate: {
         subFolders: false
+    },
+    dev: process.env.NODE_ENV !== 'production',
+    publicRuntimeConfig: {
+        ext: process.env.NODE_ENV !== 'development' ? '' : ''
     }
 }

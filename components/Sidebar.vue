@@ -1,45 +1,41 @@
 <template>
-  <div>
-    <h1 class="title mb-lg-3 d-flex align-items-center justify-content-between">
-      <NuxtLink to="/" class="title logo text-decoration-none">
-        eisdev
-      </NuxtLink>
-    </h1>
-    <div class="menu-area mb-4 pb-2">
-      <NuxtLink :to="'/'+item.link+ext" class="title link text-decoration-none" v-for="item in menu" v-text="item.title"/>
+    <div>
+        <h1 class="title mb-lg-3 d-flex align-items-center justify-content-between">
+            <NuxtLink to="/" class="title logo text-decoration-none">
+                eisdev
+            </NuxtLink>
+        </h1>
+        <div class="menu-area mb-4 pb-2">
+            <NuxtLink :to="'/'+item.link+$config.ext" class="title link text-decoration-none" v-for="item in menu"
+                      v-text="item.title"/>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
-  export default {
-    name: "Sidebar",
-    data() {
-      return {
-        menu: {
-          about: {
-            title: "about",
-            link: "about"
-          },
-          articles: {
-            title: "articles",
-            link: "articles/page/1"
-          },
-          works: {
-            title: "works",
-            link: "works/page/1"
-          },
-          contact: {
-            title: "contact",
-            link: "contact"
-          },
+    export default {
+        name: "Sidebar",
+        data() {
+            return {
+                menu: {
+                    about: {
+                        title: "about",
+                        link: "about"
+                    },
+                    articles: {
+                        title: "articles",
+                        link: "articles/page/1"
+                    },
+                    works: {
+                        title: "works",
+                        link: "works/page/1"
+                    },
+                    contact: {
+                        title: "contact",
+                        link: "contact"
+                    },
+                }
+            }
         }
-      }
-    },
-    computed: {
-      ext() {
-        return process.browser ? "" : ".html"
-      }
     }
-  }
 </script>

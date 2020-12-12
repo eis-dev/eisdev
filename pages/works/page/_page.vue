@@ -1,12 +1,12 @@
 <template>
     <div>
         <h1 class="font-weight-normal" v-text="'works'"/>
-        <h4 class="font-weight-normal" v-if="currentPage > 1" v-text="'page ' + currentPage">page 1</h4>
+        <h4 class="font-weight-normal" v-if="currentPage > 1" v-text="'page ' + currentPage"/>
         <ul class="list-group list-group-flush mt-3">
             <li class="list-group-item" v-for="item of paginatedWorks">
-                <nuxt-link :to="'/works/' + item.slug + ext" class="read-more font-weight-light d-block mt-2">
+                <nuxt-link :to="'/works/' + item.slug + $config.ext" class="read-more font-weight-light d-block mt-2">
                     <strong class="d-block" v-text="item.title"></strong>
-                    <span>inspect work</span>
+                    <span v-text="'inspect work'"/>
                 </nuxt-link>
             </li>
         </ul>
@@ -16,11 +16,6 @@
 
 <script>
     export default {
-        computed: {
-            ext() {
-                return process.browser ? "" : ".html"
-            }
-        },
         async asyncData({$content, params, error}) {
             // per page
             const perPage = 10;
