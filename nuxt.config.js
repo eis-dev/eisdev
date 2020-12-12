@@ -38,7 +38,7 @@ export default {
             html = html.replace(/data-vue-ssr-/g, "");
             html = html.replace(/nuxt/g, "eisdev");
             html = html.replace(/ eisdev-link-active/g, "");
-            html = html.replace(/ eisdev-link-exact-/g, "");
+            html = html.replace(/ eisdev-link-exact-/g, " ");
             html = html.replace(/\n/g, "");
             html = html.replace(/  /g, " ");
             html = html.replace(/  /g, " ");
