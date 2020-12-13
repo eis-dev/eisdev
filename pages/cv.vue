@@ -1,7 +1,6 @@
 <template>
     <div>
         <button class="primary-button back-btn position-absolute" id="downloadCVBtn"
-                onclick="html2pdf(document.getElementById('pdfContent'))"
                 v-text="'Download File (Eyup_ISIK_CV.pdf)'"/>
         <section slot="pdf-content" id="pdfContent">
             <div class="a4">

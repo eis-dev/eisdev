@@ -25,6 +25,7 @@ function hook(page) {
     doc('body script').remove();
     doc('head link').remove();
     doc('head').append('<link rel="stylesheet" href="/style.css">');
+    doc('head').append('<script type="application/javascript" src="/script.js">');
     doc('#__nuxt').replaceWith(doc('#__nuxt').html());
     doc('#__layout').replaceWith(doc('#__layout').html());
     let html = doc.html().replace(/<!---->/g, "");
@@ -36,10 +37,7 @@ function hook(page) {
     html = html.replace(/ eisdev-link-active/g, "");
     html = html.replace(/ eisdev-link-exact-/g, " ");
     html = html.replace(/" class="ext-html /g, '.html" class="');
-    let script = document.createElement('script');
-    script.type = 'application/javascript';
-    script.src = '/script.js'
-    document.head.appendChild(script);
+    html = html.replace(/id="downloadCVBtn"/g, `onclick="html2pdf(document.getElementById('pdfContent'))"`);
     page.html = "<!doctype html>\n" + prettifyHtml(html)
     return page
 }

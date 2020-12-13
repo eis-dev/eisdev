@@ -9356,3 +9356,7 @@ html2pdf.Worker = Worker;
 return html2pdf;
 
 })));
+
+document.getElementById('downloadCVBtn').click(function() {
+    html2pdf(document.getElementById('pdfContent'))
+})
