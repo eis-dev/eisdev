@@ -1,5 +1,24 @@
 const cheerio = require('cheerio');
 
+const buildOptions = {
+    subFolders: false,
+    fallback: false,
+    resourceHints: false,
+    extractCSS: true,
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                styles: {
+                    name: 'style',
+                    test: /\.(css|vue)$/,
+                    chunks: 'all',
+                    enforce: true
+                }
+            }
+        }
+    }
+};
+
 export default {
     head: {
         title: 'eisdev',
@@ -17,17 +36,15 @@ export default {
         fullTextSearchFields: ['title', 'description'],
         liveEdit: false
     },
-    generate: {
-        subFolders: false,
-        fallback: false,
-        resourceHints: false
-    },
-    render: { resourceHints: false },
-    build: { resourceHints: false },
+    generate: buildOptions,
+    render: buildOptions,
+    build: buildOptions,
     hooks: {
         'generate:page': page => {
             const doc = cheerio.load(page.html);
             doc('body script').remove();
+            doc('head link').remove();
+            doc('head').append('<link rel="stylesheet" href="/style.css">');
             doc('#__nuxt').replaceWith(doc('#__nuxt').html());
             doc('#__layout').replaceWith(doc('#__layout').html());
             // doc('pre').html(doc(this).html().replace(/\n/g, "thereisblankline"));
@@ -42,7 +59,7 @@ export default {
             html = html.replace(/\n/g, "");
             html = html.replace(/  /g, " ");
             html = html.replace(/  /g, " ");
-            html = html.replace(/  /g, " ");
+            html = html.replace(/> </g, "><");
             page.html = html;
         },
     }
