@@ -1,11 +1,11 @@
 <template>
     <div>
-        <button class="primary-button back-btn position-absolute" @click="downloadCv"
+        <button class="primary-button back-btn position-absolute" id="downloadCVBtn" @click="downloadCv"
                 v-text="'Download File (Eyup_ISIK_CV.pdf)'"/>
         <VueHtml2pdf :show-layout="true" :float-layout="true" :enable-download="true" :preview-modal="false"
                      :paginate-elements-by-height="999999" filename="Eyup_ISIK_CV" :pdf-quality="5"
                      :manual-pagination="false" pdf-format="a4" pdf-orientation="portrait" pdf-content-width="800px"
-                     ref="html2Pdf">
+                     ref="html2Pdf" id="html2Pdf">
             <section slot="pdf-content">
                 <div class="a4">
                     <div class="cv-image"
@@ -18,16 +18,14 @@
                         <div class="contact-info" :style="{height: 'calc(' + cv.image.height + ' - 7rem - 3px)'}">
                             <table class="w-100 h-100 contact-table">
                                 <tr>
-                                    <td>Tel:</td>
-                                    <td v-text="cv.tel"/>
                                     <td v-text="cv.birth"/>
+                                    <td v-text="cv.tel"/>
                                 </tr>
                                 <tr>
-                                    <td>Mail:</td>
+                                    <td v-text="cv.address"/>
                                     <td>
                                         <a :href="'mailto:' + cv.mail" v-text="cv.mail"/>
                                     </td>
-                                    <td v-text="cv.address"/>
                                 </tr>
                             </table>
                         </div>
@@ -79,7 +77,6 @@
 </template>
 
 <script>
-    import VueHtml2pdf from "vue-html2pdf";
     export default {
         head() {
             return {
@@ -92,12 +89,17 @@
             }
         },
         layout: "empty",
+        beforeMount() {
+            this.$options.components.VueHtml2pdf = require('vue-html2pdf').default
+        },
+        mounted() {
+            this.downloadCv();
+        },
         computed: {
             cv() {
                 return require("../content/cv.json")
             }
         },
-        components: {VueHtml2pdf},
         methods: {
             downloadCv() {
                 this.$refs.html2Pdf.generatePdf()
@@ -113,7 +115,6 @@
 </script>
 
 <style scoped>
-
     .back-btn {
         z-index: 99999999 !important;
         position: absolute !important;

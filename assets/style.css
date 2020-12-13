@@ -249,19 +249,18 @@ pre {
     }
 }
 
-.sidebar .link.menu-active {
-    color: #454545 !important;
-}
+/*.sidebar .link.menu-active {*/
+/*    color: #454545 !important;*/
+/*}*/
 
 @media only screen and (max-width: 540px) {
     .sidebar .link {
         color: #454545 !important;
     }
 
-    .sidebar .link.menu-active {
-        font-weight: 400 !important;
-    }
-
+    /*.sidebar .link.menu-active {*/
+    /*    font-weight: 400 !important;*/
+    /*}*/
     html {
         font-size: 12px !important;
     }

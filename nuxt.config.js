@@ -1,5 +1,5 @@
 const cheerio = require('cheerio');
-const prettifyHtml = require('prettify-html')
+const prettifyHtml = require('prettify-html');
 
 const buildOptions = {
     subFolders: false,
@@ -22,8 +22,8 @@ const buildOptions = {
 
 function hook(page) {
     const doc = cheerio.load(page.html);
-    doc('body script').remove();
-    doc('head link').remove();
+    // doc('body script').remove();
+    // doc('head link').remove();
     doc('head').append('<link rel="stylesheet" href="/style.css">');
     doc('#__nuxt').replaceWith(doc('#__nuxt').html());
     doc('#__layout').replaceWith(doc('#__layout').html());

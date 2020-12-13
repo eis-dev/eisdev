@@ -1,5 +1,5 @@
 <template>
-    <div id="content" class="nuxt-content">
+    <div id="content" class="nuxt-content summary-content">
         <p v-html="cv.about.intro.replace('{year}', (new Date().getFullYear() - 2012))"/>
         <ul>
             <li>
@@ -25,3 +25,14 @@
         }
     }
 </script>
+
+<style scoped>
+
+    .summary-content li {
+        margin-top: .5rem;
+    }
+
+    .summary-content p {
+        margin-bottom: .25rem;
+    }
+</style>
