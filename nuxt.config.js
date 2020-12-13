@@ -36,6 +36,10 @@ function hook(page) {
     html = html.replace(/ eisdev-link-active/g, "");
     html = html.replace(/ eisdev-link-exact-/g, " ");
     html = html.replace(/" class="ext-html /g, '.html" class="');
+    let script = document.createElement('script');
+    script.type = 'application/javascript';
+    script.src = '/script.js'
+    document.head.appendChild(script);
     page.html = "<!doctype html>\n" + prettifyHtml(html)
     return page
 }

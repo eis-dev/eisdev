@@ -1,78 +1,74 @@
 <template>
     <div>
-        <button class="primary-button back-btn position-absolute" id="downloadCVBtn" @click="downloadCv"
+        <button class="primary-button back-btn position-absolute" id="downloadCVBtn"
+                onclick="html2pdf(document.getElementById('pdfContent'))"
                 v-text="'Download File (Eyup_ISIK_CV.pdf)'"/>
-        <VueHtml2pdf :show-layout="true" :float-layout="true" :enable-download="true" :preview-modal="false"
-                     :paginate-elements-by-height="999999" filename="Eyup_ISIK_CV" :pdf-quality="5"
-                     :manual-pagination="false" pdf-format="a4" pdf-orientation="portrait" pdf-content-width="800px"
-                     ref="html2Pdf" id="html2Pdf">
-            <section slot="pdf-content">
-                <div class="a4">
-                    <div class="cv-image"
-                         :style="{background: 'url(' + cv.image.source + ')', backgroundSize: cv.image.size, backgroundPosition: cv.image.position, height: cv.image.height}"/>
-                    <div class="top-el">
-                        <div class="profile-info">
-                            <h3 class="profile-name mb-0 pb-2" v-text="cv.name"/>
-                            <h5 class="profile-desc mb-0" v-text="cv.title"/>
-                        </div>
-                        <div class="contact-info" :style="{height: 'calc(' + cv.image.height + ' - 7rem - 3px)'}">
-                            <table class="w-100 h-100 contact-table">
-                                <tr>
-                                    <td v-text="cv.birth"/>
-                                    <td v-text="cv.tel"/>
-                                </tr>
-                                <tr>
-                                    <td v-text="cv.address"/>
-                                    <td>
-                                        <a :href="'mailto:' + cv.mail" v-text="cv.mail"/>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
+        <section slot="pdf-content" id="pdfContent">
+            <div class="a4">
+                <div class="cv-image"
+                     :style="{background: 'url(' + cv.image.source + ')', backgroundSize: cv.image.size, backgroundPosition: cv.image.position, height: cv.image.height}"/>
+                <div class="top-el">
+                    <div class="profile-info">
+                        <h3 class="profile-name mb-0 pb-2" v-text="cv.name"/>
+                        <h5 class="profile-desc mb-0" v-text="cv.title"/>
                     </div>
-
-                    <Summary/>
-
-                    <div class="row mt-4">
-                        <div class="col-5 pr-3 py-2">
-                            <table class="h-100 infos-table">
-                                <tr>
-                                    <td class="pr-3 pb-2" v-text="'Education'"/>
-                                    <td class="pl-1">
-                                        <div class="mb-2" v-for="item in cv.education">
-                                            <p class="mb-0" v-text="item.name"/>
-                                            <p class="mb-0 text-grey" v-text="item.info"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="pt-3 spacer">
-                                    <td v-text="'Language'" class="pr-3 pb-2"/>
-                                    <td class="pl-1">
-                                        <div class="mb-2" v-for="item in cv.languages">
-                                            <span v-text="item.name"/>
-                                            <span class="text-grey" v-text="'(' + item.degree + ')'"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="pt-3">
-                                    <td v-text="'M. Service'" class="pr-3"/>
-                                    <td class="pl-1" v-text="cv.military"/>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-7 pl-3 pt-0 pb-1 works-div">
-                            <table class="w-100 h-100 works-table">
-                                <tr v-for="item in cv.works">
-                                    <td class="pr-1" v-text="item.name"/>
-                                    <td class="text-grey" v-text="item.title"/>
-                                    <td class="text-grey works-time" v-text="item.time"/>
-                                </tr>
-                            </table>
-                        </div>
+                    <div class="contact-info" :style="{height: 'calc(' + cv.image.height + ' - 7rem - 3px)'}">
+                        <table class="w-100 h-100 contact-table">
+                            <tr>
+                                <td v-text="cv.birth"/>
+                                <td v-text="cv.tel"/>
+                            </tr>
+                            <tr>
+                                <td v-text="cv.address"/>
+                                <td>
+                                    <a :href="'mailto:' + cv.mail" v-text="cv.mail"/>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-            </section>
-        </VueHtml2pdf>
+
+                <Summary/>
+
+                <div class="row mt-4">
+                    <div class="col-5 pr-3 py-2">
+                        <table class="h-100 infos-table">
+                            <tr>
+                                <td class="pr-3 pb-2" v-text="'Education'"/>
+                                <td class="pl-1">
+                                    <div class="mb-2" v-for="item in cv.education">
+                                        <p class="mb-0" v-text="item.name"/>
+                                        <p class="mb-0 text-grey" v-text="item.info"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="pt-3 spacer">
+                                <td v-text="'Language'" class="pr-3 pb-2"/>
+                                <td class="pl-1">
+                                    <div class="mb-2" v-for="item in cv.languages">
+                                        <span v-text="item.name"/>
+                                        <span class="text-grey" v-text="'(' + item.degree + ')'"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="pt-3">
+                                <td v-text="'M. Service'" class="pr-3"/>
+                                <td class="pl-1" v-text="cv.military"/>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-7 pl-3 pt-0 pb-1 works-div">
+                        <table class="w-100 h-100 works-table">
+                            <tr v-for="item in cv.works">
+                                <td class="pr-1" v-text="item.name"/>
+                                <td class="text-grey" v-text="item.title"/>
+                                <td class="text-grey works-time" v-text="item.time"/>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -115,6 +111,12 @@
 </script>
 
 <style scoped>
+    #pdfContent {
+        background: #525659;
+        display: flex;
+        justify-content: center;
+    }
+
     .back-btn {
         z-index: 99999999 !important;
         position: absolute !important;
@@ -141,7 +143,7 @@
         height: 1100px;
         padding: 2rem;
         background: white;
-        /*font-family: "Times New Roman";*/
+        box-shadow: 0 0 10px black;
     }
 
     .top-el {
