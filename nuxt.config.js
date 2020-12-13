@@ -47,12 +47,10 @@ export default {
             {charset: 'utf-8'},
             {name: 'title', content: 'eisdev'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'},
-            {name: 'author', content: 'eisdev'},
-            {name: 'robots', content: 'index, follow'}
+            {name: 'author', content: 'eisdev'}
         ]
     },
     css: ['@/assets/style.css'],
-    plugins: [],
     components: true,
     buildModules: [],
     modules: ['@nuxt/content', 'bootstrap-vue/nuxt'],

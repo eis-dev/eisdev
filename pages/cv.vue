@@ -33,20 +33,7 @@
                         </div>
                     </div>
 
-                    <div id="content" class="nuxt-content">
-                        <p v-html="cv.about.intro.replace('{year}', (new Date().getFullYear() - 2012))"/>
-                        <ul>
-                            <li>
-                                <p v-html="cv.about.skillsText"/>
-                                <div class="pl-3">
-                  <span v-for="(skill, index) in cv.about.skills"
-                        v-text="skill + (index < cv.about.skills.length - 1 ? ', ' : '.')"/>
-                                </div>
-                            </li>
-                            <li v-for="item in cv.about.items" v-html="item"/>
-                        </ul>
-                        <p v-html="cv.about.closing.replace('{year}', (new Date().getFullYear() - 2012))"/>
-                    </div>
+                    <Summary/>
 
                     <div class="row mt-4">
                         <div class="col-5 pr-3 py-2">
@@ -94,6 +81,16 @@
 <script>
     import VueHtml2pdf from "vue-html2pdf";
     export default {
+        head() {
+            return {
+                title: "Eyüp IŞIK CV | eisdev",
+                meta: [
+                    {name: 'robots', content: 'noindex'},
+                    {name: 'googlebot', content: 'noindex'},
+                    {name: 'googlebot-news', content: 'noindex'}
+                ]
+            }
+        },
         layout: "empty",
         computed: {
             cv() {
