@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "git add . && git commit -a --allow-empty-message -m '' && git push -u origin master",
+    "deploy": "git add . && git commit -a --allow-empty-message -m updated && git push -u origin master",
     "load": "nuxt build && nuxt start"
   },
   "dependencies": {

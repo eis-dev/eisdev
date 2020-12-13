@@ -27,9 +27,7 @@ function hook(page) {
     doc('head').append('<link rel="stylesheet" href="/style.css">');
     doc('#__nuxt').replaceWith(doc('#__nuxt').html());
     doc('#__layout').replaceWith(doc('#__layout').html());
-    // doc('pre').html(doc(this).html().replace(/\n/g, "thereisblankline"));
-    let html = doc.html();
-    html = html.replace(/<!---->/g, "");
+    let html = doc.html().replace(/<!---->/g, "");
     html = html.replace(/ data-n-head="ssr"/g, "");
     html = html.replace(/ data-n-head-ssr/g, "");
     html = html.replace(/data-vue-ssr-/g, "");
