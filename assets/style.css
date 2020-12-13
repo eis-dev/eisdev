@@ -71,7 +71,7 @@ html {
   color: #bdbdbd;
   line-height: 4rem;
   letter-spacing: 3px;
-  transition: 100ms all;
+  transition: 100ms color;
 }
 
 .sidebar .link:hover {
@@ -132,7 +132,7 @@ html {
   color: #848484;
   text-decoration: none;
   font-size: 1.25rem;
-  transition: 100ms all;
+  transition: 100ms color;
 }
 
 .list-group-flush a:hover {
@@ -145,7 +145,7 @@ html {
   display: inline-block;
   border: 0;
   padding: .3rem 1.25rem .5rem 1.25rem !important;
-  transition: 100ms all;
+  transition: 100ms background, color;
 }
 
 .primary-button:hover {
