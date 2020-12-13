@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <button class="primary-button back-btn position-absolute" id="downloadCVBtn"
-                v-text="'Download File (Eyup_ISIK_CV.pdf)'"/>
+    <div style="display: none">
         <section slot="pdf-content" id="pdfContent">
             <div class="a4">
                 <div class="cv-image"
@@ -68,6 +66,7 @@
                 </div>
             </div>
         </section>
+        <div id="replaceScrpt"></div>
     </div>
 </template>
 

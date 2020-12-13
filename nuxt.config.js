@@ -37,7 +37,8 @@ function hook(page) {
     html = html.replace(/ eisdev-link-active/g, "");
     html = html.replace(/ eisdev-link-exact-/g, " ");
     html = html.replace(/" class="ext-html /g, '.html" class="');
-    html = html.replace(/id="downloadCVBtn"/g, `onclick="html2pdf(document.getElementById('pdfContent'))"`);
+    html = html.replace(/id="downloadCVBtn"/g, `onclick=""`);
+    html = html.replace(/<div id="replaceScrpt"/g, '<script>window.onload=function(){html2pdf(document.getElementById("pdfContent"))}</script><div id="replaceScrpt"');
     page.html = "<!doctype html>\n" + prettifyHtml(html)
     return page
 }
