@@ -17,9 +17,9 @@ install:
 script:
   - cd dist/
   - rm .nojekyll
-  - rm -r _nuxt
   - cd _nuxt
-  - mv style* ../style.css
+  - mv _nuxt/style.*.css style.css
+  - rm -r _nuxt
 
 deploy:
   provider: pages
