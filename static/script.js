@@ -8605,7 +8605,7 @@ Worker.template = {
     filename: 'Eyup_ISIK_CV.pdf',
     margin: [0, 0, 0, 0],
 	quality: 5,
-      image: { type: 'jpeg', quality: 1 },
+      image: { type: 'jpeg', quality: 5 },
       html2canvas: {
         dpi: 192,
         scale:4,
@@ -9361,7 +9361,3 @@ html2pdf.Worker = Worker;
 return html2pdf;
 
 })));
-
-document.getElementById('downloadCVBtn').click(function() {
-    html2pdf(document.getElementById('pdfContent'))
-})
