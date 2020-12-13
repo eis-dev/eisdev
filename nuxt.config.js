@@ -1,4 +1,5 @@
 const cheerio = require('cheerio');
+const prettifyHtml = require('prettify-html')
 
 const buildOptions = {
     subFolders: false,
@@ -36,11 +37,7 @@ function hook(page) {
     html = html.replace(/eisdev-content/g, "nuxt-content");
     html = html.replace(/ eisdev-link-active/g, "");
     html = html.replace(/ eisdev-link-exact-/g, " ");
-    html = html.replace(/\n/g, "");
-    html = html.replace(/  /g, " ");
-    html = html.replace(/  /g, " ");
-    html = html.replace(/> </g, "><");
-    page.html = html;
+    page.html = prettifyHtml(html)
     return page
 }
 

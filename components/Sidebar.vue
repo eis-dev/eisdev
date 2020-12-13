@@ -1,9 +1,7 @@
 <template>
     <div>
         <h1 class="title mb-lg-3 d-flex align-items-center justify-content-between">
-            <NuxtLink to="/" class="title logo text-decoration-none">
-                eisdev
-            </NuxtLink>
+            <NuxtLink to="/" class="title logo text-decoration-none" v-text="'eisdev'"/>
         </h1>
         <div class="menu-area mb-4 pb-2">
             <NuxtLink :to="'/'+item.link" class="title link text-decoration-none" v-for="item in menu"
