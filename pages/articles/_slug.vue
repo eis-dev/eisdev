@@ -7,6 +7,11 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: this.title + " | eisdev"
+            }
+        },
         async asyncData({$content, params}) {
             const text = await $content('articles', params.slug).fetch();
             const title = text.body.children[0].children[1].value;
