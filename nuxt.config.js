@@ -37,7 +37,7 @@ function hook(page) {
     html = html.replace(/eisdev-content/g, "nuxt-content");
     html = html.replace(/ eisdev-link-active/g, "");
     html = html.replace(/ eisdev-link-exact-/g, " ");
-    page.html = prettifyHtml(html)
+    page.html = "<!doctype html>\n" + prettifyHtml(html)
     return page
 }
 
@@ -46,7 +46,10 @@ export default {
         title: 'eisdev',
         meta: [
             {charset: 'utf-8'},
-            {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'}
+            {name: 'title', content: 'eisdev'},
+            {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'},
+            {name: 'author', content: 'eisdev'},
+            {name: 'robots', content: 'index, follow'}
         ]
     },
     css: ['@/assets/style.css'],

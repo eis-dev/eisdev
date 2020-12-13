@@ -7,9 +7,15 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: this.title + " | eisdev"
+            }
+        },
         async asyncData({$content, params}) {
             const text = await $content('works', params.slug).fetch();
-            return {text}
+            const title = text.body.children[0].children[1].value;
+            return {title, text}
         }
     }
 </script>

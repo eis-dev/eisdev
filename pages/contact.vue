@@ -6,6 +6,11 @@
 
 <script>
   export default {
+    head() {
+      return {
+        title: "contact | eisdev"
+      }
+    },
     async asyncData({$content, params}) {
       let text = await $content('pages', 'contact').fetch();
       text = JSON.stringify(text).replace(/www./g, '');

@@ -16,6 +16,11 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: "works | eisdev"
+            }
+        },
         async asyncData({$content, params, error}) {
             // per page
             const perPage = 10;
