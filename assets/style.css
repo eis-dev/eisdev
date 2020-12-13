@@ -244,22 +244,21 @@ pre {
 
 
 @media only screen and (max-width: 991px) and (min-width: 768px){
-  body {
-    background: #f7f7f7;
-    background: -moz-linear-gradient(180deg, #F7F7F7 50%, #FFFFFF 50%);
-    background: -webkit-linear-gradient(180deg, #F7F7F7 50%, #FFFFFF 50%);
-    background: -o-linear-gradient(180deg, #F7F7F7 50%, #FFFFFF 50%);
-    background: -ms-linear-gradient(180deg, #F7F7F7 50%, #FFFFFF 50%);
-    background: linear-gradient(180deg, #F7F7F7 50%, #FFFFFF 50%);
-  }
   .sidebar .title.logo {
     margin-bottom: 1vw !important;
   }
 }
 
+.sidebar .link.menu-active {
+  color: #454545 !important;
+}
+
 @media only screen and (max-width: 540px) {
   .sidebar .link {
     color: #454545 !important;
+  }
+  .sidebar .link.menu-active {
+    font-weight: 400 !important;
   }
   html {
     font-size: 12px !important;

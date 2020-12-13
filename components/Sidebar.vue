@@ -7,7 +7,7 @@
         </h1>
         <div class="menu-area mb-4 pb-2">
             <NuxtLink :to="'/'+item.link" class="title link text-decoration-none" v-for="item in menu"
-                      v-text="item.title"/>
+                      :class="{'menu-active': isActive(item.link)}" v-text="item.title"/>
         </div>
     </div>
 </template>
@@ -35,6 +35,13 @@
                         link: "contact"
                     },
                 }
+            }
+        },
+        methods: {
+            isActive(link) {
+                link = link.split("/")[0];
+                let fullPath = this.$route.fullPath.split("/")[1];
+                return link === fullPath;
             }
         }
     }
