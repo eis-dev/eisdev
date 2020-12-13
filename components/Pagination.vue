@@ -2,14 +2,14 @@
     <nav class="mt-4">
         <ul class="pagination">
             <li class="page-item" v-if="page > 1">
-                <NuxtLink class="text-decoration-none" :to="'/'+type+'/page/' + (page-1)">
+                <nuxt-link :to="'/'+type+'/page/' + (page-1)" class="ext-html text-decoration-none">
                     <button class="primary-button mt-2 mr-3">previous</button>
-                </NuxtLink>
+                </nuxt-link>
             </li>
             <li class="page-item" v-if="page < total">
-                <NuxtLink class="text-decoration-none" :to="'/'+type+'/page/' + (page+1)">
+                <nuxt-link :to="'/'+type+'/page/' + (page+1)" class="ext-html text-decoration-none">
                     <button class="primary-button mt-2">next</button>
-                </NuxtLink>
+                </nuxt-link>
             </li>
         </ul>
     </nav>

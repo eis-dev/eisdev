@@ -35,6 +35,7 @@ function hook(page) {
     html = html.replace(/eisdev-content/g, "nuxt-content");
     html = html.replace(/ eisdev-link-active/g, "");
     html = html.replace(/ eisdev-link-exact-/g, " ");
+    html = html.replace(/" class="ext-html /g, '.html" class="');
     page.html = "<!doctype html>\n" + prettifyHtml(html)
     return page
 }

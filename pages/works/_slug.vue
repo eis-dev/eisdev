@@ -1,7 +1,7 @@
 <template>
     <div>
         <nuxt-content :document="text"/>
-        <nuxt-link to="/works/page/1" class="primary-button mt-3 back-btn" v-text="'back'"/>
+        <nuxt-link to="/works/page/1" class="ext-html primary-button mt-3 back-btn" v-text="'back'"/>
     </div>
 </template>
 

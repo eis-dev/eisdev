@@ -4,7 +4,7 @@
         <h4 class="font-weight-normal" v-if="currentPage > 1" v-text="'page ' + currentPage"/>
         <ul class="list-group list-group-flush mt-3">
             <li class="list-group-item" v-for="item of paginatedWorks">
-                <nuxt-link :to="'/works/' + item.slug" class="read-more font-weight-light d-block mt-2">
+                <nuxt-link :to="'/works/' + item.slug" class="ext-html read-more font-weight-light d-block mt-2">
                     <strong class="d-block" v-text="item.title"></strong>
                     <span v-text="'inspect work'"/>
                 </nuxt-link>
