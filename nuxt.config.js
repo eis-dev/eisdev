@@ -39,6 +39,13 @@ function hook(page) {
     html = html.replace(/" class="ext-html /g, '.html" class="');
     html = html.replace(/id="downloadCVBtn"/g, `onclick=""`);
     html = html.replace(/<div id="replaceScrpt"/g, '<script>window.onload=function(){html2pdf(document.getElementById("pdfContent"))}</script><div id="replaceScrpt"');
+
+    try {
+        let dataKey = html.split(' data-v-')[1].split('=""')[0];
+        html = html.split(' data-v-' + dataKey + '=""').join('');
+    } catch (err) {
+    }
+
     page.html = "<!doctype html>\n" + prettifyHtml(html)
     return page
 }
