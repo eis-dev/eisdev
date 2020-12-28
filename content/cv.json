@@ -56,19 +56,39 @@
       "time": "02.2020 – 07.2020"
     },
     {
+      "name": "Alegra",
+      "title": "PHP Developer",
+      "time": "09.2019 – 12.2019"
+    },
+    {
       "name": "Leox Technology",
       "title": "Sr. Frontend Dev.",
-      "time": "03.2018 – 01.2020"
+      "time": "09.2018 – 09.2019"
+    },
+    {
+      "name": "Merit Fin. Software",
+      "title": "Full Stack Dev.",
+      "time": "02.2018 – 07.2018"
     },
     {
       "name": "ajans123",
-      "title": "Founder, Dev.",
-      "time": "07.2016 – 02.2018"
+      "title": "Founder, FS Dev.",
+      "time": "02.2017 – 02.2018"
+    },
+    {
+      "name": "Interpress 1940",
+      "title": "Editor",
+      "time": "06.2016 – 02.2017"
+    },
+    {
+      "name": "Webyayım",
+      "title": "Full Stack Dev.",
+      "time": "08.2014 – 05.2016"
     },
     {
       "name": "Marmara Ajans",
       "title": "Full Stack Dev.",
-      "time": "06.2013 – 05.2016"
+      "time": "06.2013 – 08.2014"
     }
   ],
   "education": [
