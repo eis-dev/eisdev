@@ -6,32 +6,7 @@
   "tel": "Tel: +90 537 871 2166",
   "mail": "Mail: hello@eisdev.me",
   "about": {
-    "skills": [
-      "HTML5",
-      "CSS3",
-      "SASS",
-      "SCSS",
-      "Less.js",
-      "Bootstrap",
-      "JS",
-      "ES6+",
-      "Node.js",
-      "Express.js",
-      "Vue.js",
-      "VueNative",
-      "Nuxt",
-      "SSR",
-      "RESTful API",
-      "jQuery",
-      "AJAX",
-      "Axios",
-      "Socket.io",
-      "MongoDB",
-      "MySQL",
-      "PHP",
-      "OOP",
-      "Laravel"
-    ],
+    "skills": ["HTML5", "CSS3", "SASS", "SCSS", "Less.js", "Bootstrap", "JS", "ES6+", "Node.js", "Express.js", "Vue.js", "VueNative", "Nuxt", "SSR", "RESTful API", "jQuery", "AJAX", "Axios", "Socket.io", "MongoDB", "MySQL", "PHP", "OOP", "Laravel"],
     "intro": "I am a software developer who has {year} years of professional experience in Frontend &amp; PHP projects.",
     "closing": "As a programmer who is keen on innovations and willing to learn by using my knowledge and experience; I want to develop new projects with contemporary technologies.",
     "skillsText": "Powerful experiences on;",
@@ -46,7 +21,7 @@
   "military": "Postponed to 2024",
   "works": [
     {
-      "name": "Kodio",
+      "name": "Kodio app",
       "title": "Sr. Frontend Dev.",
       "time": "07.2020 – now"
     },
@@ -56,19 +31,29 @@
       "time": "02.2020 – 07.2020"
     },
     {
-      "name": "Leox Technology",
+      "name": "Alegra",
+      "title": "PHP Developer",
+      "time": "09.2019 – 12.2019"
+    },
+    {
+      "name": "Leox Tech.",
       "title": "Sr. Frontend Dev.",
-      "time": "03.2018 – 01.2020"
+      "time": "02.2018 – 07.2019"
     },
     {
       "name": "ajans123",
-      "title": "Founder, Dev.",
-      "time": "07.2016 – 02.2018"
+      "title": "Founder, FS Dev.",
+      "time": "06.2016 – 02.2018"
     },
     {
-      "name": "Marmara Ajans",
+      "name": "Webyayim",
       "title": "Full Stack Dev.",
-      "time": "06.2013 – 05.2016"
+      "time": "08.2014 – 04.2016"
+    },
+    {
+      "name": "Marmara ajans",
+      "title": "Full Stack Dev.",
+      "time": "06.2013 – 08.2014"
     }
   ],
   "education": [

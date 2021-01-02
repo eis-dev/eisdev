@@ -26,21 +26,3 @@
         }
     }
 </script>
-
-<style>
-    #aboutPage {
-        line-height: 1.9rem;
-    }
-
-    #aboutPage li {
-        margin-top: 1rem;
-    }
-
-    #aboutPage p {
-        margin-bottom: 0;
-    }
-
-    #aboutPage ul li div {
-        padding-left: 0 !important;
-    }
-</style>

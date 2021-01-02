@@ -1,0 +1,17 @@
+{
+  "subFolders": false,
+  "fallback": false,
+  "resourceHints": false,
+  "extractCSS": true,
+  "optimization": {
+    "splitChunks": {
+      "cacheGroups": {
+        "styles": {
+          "name": "style",
+          "chunks": "all",
+          "enforce": true
+        }
+      }
+    }
+  }
+}

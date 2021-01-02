@@ -40,19 +40,3 @@
         }
     };
 </script>
-
-<style scoped>
-    #pdfContent {
-        background: #525659;
-        display: flex;
-        justify-content: center;
-    }
-
-    .a4 {
-        width: 800px;
-        height: 1100px;
-        padding: 2rem;
-        background: white;
-        box-shadow: 0 0 10px black;
-    }
-</style>

@@ -1,0 +1,4 @@
+{
+  "fullTextSearchFields": ["title", "description"],
+  "liveEdit": false
+}

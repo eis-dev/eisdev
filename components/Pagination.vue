@@ -1,5 +1,5 @@
 <template>
-    <nav class="mt-4">
+    <nav class="mt-4" v-if="page > 1 || page < total">
         <ul class="pagination">
             <li class="page-item" v-if="page > 1">
                 <nuxt-link :to="'/'+type+'/page/' + (page-1)" class="ext-html text-decoration-none">
