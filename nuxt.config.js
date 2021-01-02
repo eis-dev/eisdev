@@ -2,7 +2,7 @@
 const head = require('./config/head.json');
 
 // css
-const css = ['./assets/style.scss'];
+const css = [{src: './assets/scss/index.scss', lang: 'scss'}];
 
 // content
 const content = require('./config/content.json');
@@ -16,17 +16,13 @@ const modules = ['@nuxt/content', 'bootstrap-vue/nuxt'];
 // build modules
 const buildModules = [];
 
-// build options
-const buildOptions = require('./config/build-options.json');
-buildOptions.optimization.splitChunks.cacheGroups.styles["test"] = /\.(css|vue)$/;
-const buildOpt = {generate: buildOptions, render: buildOptions, build: buildOptions}
-
 // hook
 const hook = (page) => require('./config/hook.js')(page);
-const hooks = {
-    'generate:page': page => hook(page),
-    'build:page': page => hook(page),
-    'render:page': page => hook(page)
-};
+const hooks = {'generate:page': hook, 'build:page': hook, 'render:page': hook};
+
+// build options
+const buildOptions = require('./config/build-options.json');
+buildOptions.optimization.splitChunks.cacheGroups.styles["test"] = /\.(scss|css|vue)$/;
+const buildOpt = {generate: buildOptions, render: buildOptions, build: buildOptions}
 
 export default {head, css, components, modules, buildModules, content, ...buildOpt, hooks}

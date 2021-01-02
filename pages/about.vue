@@ -1,6 +1,6 @@
 <template>
     <div id="aboutPage">
-        <h1>about</h1>
+        <h1 v-text="'about'"></h1>
         <nuxt-content class="pb-3" :document="text"/>
         <Summary :cv="cv" class="nuxt-content"/>
         <DownloadCv/>

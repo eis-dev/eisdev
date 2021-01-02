@@ -20,8 +20,14 @@ module.exports = (page) => {
     html = html.replace(/ eisdev-link-exact-/g, " ");
     html = html.replace(/" class="ext-html /g, '.html" class="');
     html = html.replace(/id="downloadCVBtn"/g, `onclick=""`);
-    html = html.replace(/<div id="replaceScrpt"/g, '<script>window.onload=function(){html2pdf(document.getElementById("pdfContent"))}</script><div id="replaceScrpt"');
+    html = html.replace(/ <div id="replaceScrpt"><\/div>/g, '<script>window.onload=function(){html2pdf(document.getElementById("pdfContent"))}</script>');
 
-    page.html = "<!doctype html>\n" + prettifyHtml(html)
+    page.html = "<!doctype html>\n" + prettifyHtml(html);
+
+    try {
+        page.html = JSON.stringify(page);
+    } catch (err) {
+    }
+
     return page
 }

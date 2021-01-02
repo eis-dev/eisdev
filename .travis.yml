@@ -14,11 +14,11 @@ install:
   - npm install
   - npm run generate
 
-script:
-  - cd dist/
-  - rm .nojekyll
-  - mv _nuxt/style.*.css style.css
-  - rm -r _nuxt
+#script:
+#  - cd dist/
+#  - rm .nojekyll
+#  - mv _nuxt/style.*.css style.css
+#  - rm -r _nuxt
 
 deploy:
   provider: pages
