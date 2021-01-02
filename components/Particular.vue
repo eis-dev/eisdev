@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="cv-image" :src="profile"/>
+        <img class="cv-image" :src="image"/>
         <div class="top-el">
             <div class="profile-info">
                 <h3 class="profile-name mb-0 pb-2" v-text="cv.name"/>
@@ -23,13 +23,13 @@
 </template>
 
 <script>
-    import profile from "../content/cv/profile.jpg";
+    import image from "../content/cv/image.jpg";
 
     export default {
         name: "Particular",
         props: ["cv"],
         data() {
-            return {profile}
+            return {image}
         }
     }
 </script>

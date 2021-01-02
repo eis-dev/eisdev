@@ -9,6 +9,7 @@ module.exports = (page) => {
     doc('head').append('<script type="application/javascript" src="/script.js">');
     doc('#__nuxt').replaceWith(doc('#__nuxt').html());
     doc('#__layout').replaceWith(doc('#__layout').html());
+    doc('.cv-image').attr('src', 'image.jpg');
 
     let html = doc.html().replace(/<!---->/g, "");
     html = html.replace(/ data-n-head="ssr"/g, "");
