@@ -1,10 +1,14 @@
 [
   {
     "name": "Web Design and Coding",
-    "info": "Anadolu Uni. 2020 – now"
+    "info": "Anadolu Uni.",
+    "start": "2020",
+    "end": "now"
   },
   {
     "name": "Radio and TV Prog. Prod.",
-    "info": "Anadolu Uni. 2015 – 2019"
+    "info": "Anadolu Uni.",
+    "start": " 2015",
+    "end": "2019"
   }
 ]

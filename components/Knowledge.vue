@@ -8,7 +8,7 @@
                     <td class="pl-1">
                         <div class="mb-2" v-for="item in cv.education">
                             <p class="mb-0" v-text="item.name"/>
-                            <p class="mb-0 text-grey" v-text="item.info"/>
+                            <p class="mb-0 text-grey" v-text="item.info + ' ' + item.start + ' – ' + item.end"/>
                         </div>
                     </td>
                 </tr>
