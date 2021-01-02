@@ -1,5 +1,5 @@
 <template>
-    <div id="content" class="summary-content">
+    <div id="content">
         <p v-html="cv.about.intro.replace('{year}', (new Date().getFullYear() - 2012))"/>
         <ul>
             <li>
@@ -17,10 +17,6 @@
 <script>
     export default {
         name: "Summary",
-        computed: {
-            cv() {
-                return require("../content/cv.json")
-            }
-        }
+        props: ["cv"]
     }
 </script>

@@ -1,0 +1,48 @@
+@media only screen and (min-width: 992px) {
+  .sidebar {
+    position: fixed;
+    min-height: 100vh;
+  }
+
+  .menu-area {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .sidebar {
+    .link {
+      font-size: calc(7vw - 8px) !important;
+      line-height: 0 !important;
+      letter-spacing: 3px !important;
+      display: inline !important;
+      margin-right: .25rem !important;
+      margin-left: .25rem !important;
+    }
+
+    .title.logo {
+      margin-left: -.1rem !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .container {
+    min-height: auto;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .sidebar .title.logo {
+    margin-bottom: 1vw !important;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .sidebar .link {
+    color: #454545 !important;
+  }
+
+  html {
+    font-size: 12px !important;
+  }
+}

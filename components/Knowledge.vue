@@ -34,7 +34,7 @@
                 <tr v-for="item in cv.works">
                     <td class="pr-1" v-text="item.name"/>
                     <td class="text-grey" v-text="item.title"/>
-                    <td class="text-grey works-time" v-text="item.time"/>
+                    <td class="text-grey works-time" v-text="item.start + ' – ' + item.end"/>
                 </tr>
             </table>
         </div>
@@ -44,10 +44,6 @@
 <script>
     export default {
         name: "Knowledge",
-        computed: {
-            cv() {
-                return require("../content/cv.json")
-            }
-        }
+        props: ["cv"]
     }
 </script>

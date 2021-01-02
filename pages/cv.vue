@@ -2,9 +2,9 @@
     <div>
         <section slot="pdf-content" id="pdfContent">
             <div class="a4">
-                <Particular/>
-                <Summary/>
-                <Knowledge/>
+                <Particular :cv="cv"/>
+                <Summary :cv="cv" class="summary-content"/>
+                <Knowledge :cv="cv"/>
                 <div id="replaceScrpt"></div>
             </div>
         </section>
@@ -12,7 +12,12 @@
 </template>
 
 <script>
+    import cv from "../assets/js/cv";
+
     export default {
+        data() {
+            return {cv}
+        },
         head() {
             return {
                 title: "Eyüp IŞIK CV | eisdev",
@@ -26,11 +31,6 @@
         layout: "empty",
         beforeMount() {
             this.$options.components.VueHtml2pdf = require('vue-html2pdf').default
-        },
-        computed: {
-            cv() {
-                return require("../content/cv.json")
-            }
         },
         async asyncData({$content, params}) {
             let text = await $content('pages', 'about').fetch();

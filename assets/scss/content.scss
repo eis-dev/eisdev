@@ -1,0 +1,67 @@
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
+
+.index .markdown-body {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.list-group-flush {
+  .list-group-item {
+    padding: 0 0 1.5rem 0;
+    border-color: transparent;
+    color: #bababa;
+  }
+
+  a {
+    color: #848484;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: 100ms color;
+
+    &:hover {
+      color: #444;
+    }
+  }
+}
+
+.nuxt-content {
+  font-size: 1.25rem;
+  color: #505050;
+  font-weight: 300;
+
+  h1 {
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+
+.nuxt-content-highlight {
+  font-size: 1rem;
+}
+
+.contact-content a {
+  color: #505050;
+}

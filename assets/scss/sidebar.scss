@@ -1,0 +1,21 @@
+.sidebar {
+  background: #f7f7f7;
+
+  .title {
+    font-size: 6rem;
+    color: #444;
+    letter-spacing: 0;
+  }
+
+  .link {
+    font-size: 3.5rem;
+    color: #bdbdbd;
+    line-height: 4rem;
+    letter-spacing: 3px;
+    transition: 100ms color;
+
+    &:hover {
+      color: #444;
+    }
+  }
+}

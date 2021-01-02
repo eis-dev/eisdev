@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Kodio app",
+    "title": "Sr. Frontend Dev.",
+    "start": "07.2020",
+    "end": "now"
+  },
+  {
+    "name": "Koç Uni. Hospital",
+    "title": "Sr. Frontend Dev.",
+    "start": "02.2020",
+    "end": "07.2020"
+  },
+  {
+    "name": "Alegra",
+    "title": "PHP Developer",
+    "start": "09.2019",
+    "end": "12.2019"
+  },
+  {
+    "name": "Leox Tech.",
+    "title": "Sr. Frontend Dev.",
+    "start": "02.2018",
+    "end": "07.2019"
+  },
+  {
+    "name": "ajans123",
+    "title": "Founder, FS Dev.",
+    "start": "06.2016",
+    "end": "02.2018"
+  },
+  {
+    "name": "Webyayim",
+    "title": "Full Stack Dev.",
+    "start": "08.2014",
+    "end": "04.2016"
+  },
+  {
+    "name": "Marmara ajans",
+    "title": "Full Stack Dev.",
+    "start": "06.2013",
+    "end": "08.2014"
+  }
+]

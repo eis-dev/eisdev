@@ -21,6 +21,7 @@
     "prettify-html": "0.0.2",
     "vue-html2pdf": "^1.8.0"
   },
+  "browser": { "fs": false, "path": false, "os": false},
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
     "node-sass": "^5.0.0",

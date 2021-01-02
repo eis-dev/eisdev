@@ -1,13 +1,19 @@
 <template>
     <div id="aboutPage">
         <h1>about</h1>
-        <Summary/>
+        <nuxt-content class="pb-3" :document="text"/>
+        <Summary :cv="cv" class="nuxt-content"/>
         <DownloadCv/>
     </div>
 </template>
 
 <script>
+    import cv from "../assets/js/cv";
+
     export default {
+        data() {
+            return {cv}
+        },
         head() {
             return {
                 title: "about | eisdev",
