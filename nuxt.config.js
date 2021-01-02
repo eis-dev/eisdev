@@ -2,7 +2,7 @@
 const head = require('./config/head.json');
 
 // css
-const css = ['@/assets/style.css'];
+const css = [{src: './assets/style.scss', lang: 'scss'}];
 
 // content
 const content = require('./config/content.json');

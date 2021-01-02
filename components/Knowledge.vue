@@ -51,21 +51,3 @@
         }
     }
 </script>
-
-<style scoped>
-    .text-grey {
-        color: #979797;
-    }
-
-    .works-div {
-        border-left: 1px solid #dddddd;
-    }
-
-    .works-time {
-        width: 135px;
-    }
-
-    .infos-table tr {
-        border-bottom: 1rem solid transparent;
-    }
-</style>
