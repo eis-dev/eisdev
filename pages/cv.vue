@@ -29,7 +29,7 @@
                     {name: 'robots', content: 'noindex'},
                     {name: 'googlebot', content: 'noindex'},
                     {name: 'googlebot-news', content: 'noindex'},
-                    {name: "viewport", content: ""},
+                    {name: "viewport", content: "width=800, height=1100, user-scalable=no"},
                 ]
             }
         },
