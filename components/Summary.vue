@@ -1,6 +1,6 @@
 <template>
     <div id="content">
-        <p v-html="cv.about.intro.replace('{year}', (new Date().getFullYear() - 2012))"/>
+        <p v-html="cv.about.intro.replace('{year}', (new Date().getFullYear() - 2013))"/>
         <ul>
             <li>
                 <p v-html="cv.about.skillsText"/>

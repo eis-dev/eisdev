@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+h3, .h3 {
+  font-size: 1.6rem;
+}
+
 .a4 {
   width: 800px;
   height: 1100px;
@@ -34,16 +38,18 @@
 
 .profile-info {
   background: #ececec;
-  padding: 1.1rem 1rem 1.2rem 13.25rem;
+}
+
+.contact-info, .profile-info {
+  padding: 1.1rem 1rem 1.2rem 12rem;
 }
 
 .contact-info {
-  padding: 1.1rem 1rem 1.2rem 13.25rem;
+  height: 100px;
 }
 
 .contact-table {
   color: #626262;
-  font-size: 17px;
 }
 
 .profile-name {
@@ -56,7 +62,7 @@
 }
 
 .cv-image {
-  width: 9.5rem;
+  width: 8.375rem;
   border: 4px solid #e3e3e3;
   margin-bottom: 1rem;
   position: relative;
