@@ -1,22 +1,25 @@
 <template>
-    <div>
-        <section slot="pdf-content" id="pdfContent">
-            <div class="a4">
-                <Particular :cv="cv"/>
-                <Summary :cv="cv" class="summary-content"/>
-                <Knowledge :cv="cv"/>
-                <div id="replaceScrpt"></div>
+    <section slot="pdf-content" id="pdfContent">
+        <div class="a4">
+            <img class="cv-image" :src="image"/>
+            <Particular :cv="cv"/>
+            <Summary :cv="cv" class="summary-content"/>
+            <div class="row mt-4">
+                <Education :cv="cv"/>
+                <Experience :cv="cv"/>
             </div>
-        </section>
-    </div>
+            <div id="replace"></div>
+        </div>
+    </section>
 </template>
 
 <script>
     import cv from "../assets/js/cv";
+    import image from "../content/cv/image.jpg";
 
     export default {
         data() {
-            return {cv}
+            return {cv, image}
         },
         head() {
             return {
