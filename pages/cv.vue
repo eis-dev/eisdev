@@ -18,6 +18,7 @@
     import image from "../content/cv/image.jpg";
 
     export default {
+        layout: "empty",
         data() {
             return {cv, image}
         },
@@ -27,15 +28,15 @@
                 meta: [
                     {name: 'robots', content: 'noindex'},
                     {name: 'googlebot', content: 'noindex'},
-                    {name: 'googlebot-news', content: 'noindex'}
+                    {name: 'googlebot-news', content: 'noindex'},
+                    {name: "viewport", content: ""},
                 ]
             }
         },
-        layout: "empty",
         beforeMount() {
             this.$options.components.VueHtml2pdf = require('vue-html2pdf').default
         },
-        async asyncData({$content, params}) {
+        async asyncData({$content}) {
             let text = await $content('pages', 'about').fetch();
             text = JSON.stringify(text).replace(/http:\/\//g, '').replace(/https:\/\//g, '');
             text = JSON.parse(text);
