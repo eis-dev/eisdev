@@ -8604,8 +8604,8 @@ Worker.template = {
   opt: {
     filename: 'Eyup_ISIK_CV.pdf',
     margin: [0, 0, 0, 0],
-	quality: 5,
-      image: { type: 'jpeg', quality: 5 },
+	quality: 10,
+      image: { type: 'jpeg', quality: 10 },
       html2canvas: {
         dpi: 192,
         scale:4,

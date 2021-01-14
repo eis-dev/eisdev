@@ -31,7 +31,7 @@ $text: 15px;
   }
 
   .works-time {
-    width: 135px;
+    width: 125px;
   }
 
   .infos-table tr {
@@ -73,5 +73,31 @@ $text: 15px;
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
+  }
+
+  a {
+    color: #4b8fd8;
+  }
+
+  .more-p {
+    border-top: 1px solid #efefef;
+    line-height: 1.75;
+  }
+
+  .summary-list {
+    li {
+      &:before {
+        content: '▪';
+        width: 2rem;
+        text-align: center;
+        display: inline-block;
+        transform: scale(1.5);
+      }
+
+      .skills {
+        padding-left: 2rem;
+        line-height: 1.75;
+      }
+    }
   }
 }
