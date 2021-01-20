@@ -3,7 +3,7 @@
         <p v-html="cv.about.intro.replace('{year}', (new Date().getFullYear() - 2013))"/>
         <ul class="summary-list list-unstyled">
             <li>
-                <p class="d-inline" v-html="cv.about.skillsText"/>
+                {{cv.about.skillsText}}
                 <div class="skills pt-1 pb-2">
                     <span v-for="skill in cv.about.skills" v-text="skill"/>
                 </div>
