@@ -8,7 +8,9 @@
             <table class="w-100 h-100 contact-table">
                 <tr>
                     <td v-text="cv.birth"/>
-                    <td v-text="'Tel: ' + cv.tel"/>
+                    <td>
+                      Tel: <a href="javascript: void(0)" class="tel-css" v-text="cv.tel"/>
+                    </td>
                 </tr>
                 <tr>
                     <td v-text="cv.address"/>
