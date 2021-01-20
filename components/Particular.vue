@@ -9,7 +9,7 @@
                 <tr>
                     <td v-text="cv.birth"/>
                     <td>
-                      Tel: <a href="javascript: void(0)" class="tel-css" v-text="cv.tel"/>
+                      Tel: <a href="javascript:void(0)" class="not-tel" v-text="cv.tel"/>
                     </td>
                 </tr>
                 <tr>
