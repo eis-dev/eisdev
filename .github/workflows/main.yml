@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Build
+        run: npm run generate
+
+      - name: Deploy
+        uses: actions/github-pages@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: dist
+
+      - name: Remove .nojekyll
+        run: |
+          cd dist
+          rm -rf .nojekyll
+
+      - name: Rename style.*.css to style.css
+        run: |
+          cd dist
+          mv _nuxt/style.*.css style.css
+
+      - name: Remove _nuxt directory
+        run: |
+          cd dist
+          rm -rf _nuxt
