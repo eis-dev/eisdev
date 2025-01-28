@@ -1,7 +1,6 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 order-1"/>
             <div class="col-lg-8 col-12 container p-3 p-lg-5 order-2 bg-white content-container">
                 <Nuxt class="p-3 p-lg-0"/>
             </div>
